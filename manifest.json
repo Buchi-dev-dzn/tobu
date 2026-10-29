@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Tobu",
+  "version": "0.1.0",
+  "description": "Tobu (跳ぶ, \"jump\"): a Spotlight-like launcher that jumps to the open tab best matching your query, ranked by zoxide-style frecency.",
+  "permissions": ["tabs", "storage", "scripting", "activeTab", "search"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Tobu: jump to a tab (⌘⇧Space)"
+  },
+  "commands": {
+    "open-switcher": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space",
+        "mac": "Command+Shift+Space"
+      },
+      "description": "Open the tab switcher"
+    }
+  }
+}
